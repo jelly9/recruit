@@ -1,12 +1,14 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/company/company",
+    "pages/user/user",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "果冻招聘",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
