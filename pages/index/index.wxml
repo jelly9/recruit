@@ -1,2 +1,3 @@
 <!--index.wxml-->
 <text>此页面展示职位信息</text>
+<view class="box1">A</view>

@@ -19,3 +19,13 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.box1 {
+  width: 320rpx;
+  height: 100px;
+  background-color:pink; 
+}
+
+view {
+  font-size: 80rpx;
+}
