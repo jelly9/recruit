@@ -2,14 +2,37 @@
   "pages": [
     "pages/index/index",
     "pages/company/company",
-    "pages/user/user",
+    "pages/mine/mine",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "果冻招聘",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "职位",
+        "iconPath": "icons/tabBar/index.jpg",
+        "selectedIconPath": "icons/tabBar/index_s.jpg"
+      },
+      {
+        "pagePath": "pages/company/company",
+        "text": "公司",
+        "iconPath": "icons/tabBar/company.jpg",
+        "selectedIconPath": "icons/tabBar/company_s.jpg"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我",
+        "iconPath": "icons/tabBar/mine.jpg",
+        "selectedIconPath": "icons/tabBar/mine_s.jpg"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }
