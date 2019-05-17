@@ -21,3 +21,7 @@
 .usermotto {
   margin-top: 200px;
 }
+.body-view {
+  width: 320rpx;
+  height: 100px;
+}

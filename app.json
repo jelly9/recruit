@@ -3,6 +3,12 @@
     "pages/index/index",
     "pages/company/company",
     "pages/mine/mine",
+    "pages/mineSub/details/details",
+    "pages/mineSub/resume/resume",
+    "pages/mineSub/history/history",
+    "pages/mineSub/collection/collection",
+    "pages/mineSub/recruit/recruit",
+    "pages/mineSub/setup/setup",
     "pages/logs/logs"
   ],
   "window": {

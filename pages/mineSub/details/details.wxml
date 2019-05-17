@@ -1,0 +1,9 @@
+<!--pages/mineSub/details/details.wxml-->
+<view>
+  <block wx:if="{{!hasDetail}}" >
+    <button bindtap="bindDetail"> 完善信息 </button>
+  </block>
+  <block wx:else>
+    <text>{{detail}}</text>
+  </block>
+</view>

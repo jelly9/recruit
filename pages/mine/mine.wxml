@@ -3,11 +3,16 @@
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <image bindtap="bindDetails" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <text>\n</text>
+  <view class="body-view">
+    <button bindtap="bindResume">简历</button>
+    <button bindtap="bindHistory">历史</button>
+    <button bindtap="bindCollection">收藏</button>
+    <button bindtap="bindRecruit">招人</button>
+    <button bindtap="bindSetup">设置</button>
   </view>
 </view>

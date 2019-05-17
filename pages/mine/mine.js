@@ -15,6 +15,49 @@ Page({
       url: '../logs/logs'
     })
   },
+
+  // 页面跳转-个人详情
+  bindDetails: function () {
+    wx.navigateTo({
+      url: '../mineSub/details/details'
+    })
+  },
+
+  // 页面跳转-简历
+  bindResume: function () {
+    wx.navigateTo({
+      url: '../mineSub/resume/resume'
+    })
+  },
+
+  // 页面跳转-投递历史
+  bindHistory: function () {
+    wx.navigateTo({
+      url: '../mineSub/history/history'
+    })
+  },
+  
+  // 页面跳转-个人收藏
+  bindCollection: function () {
+    wx.navigateTo({
+      url: '../mineSub/collection/collection'
+    })
+  },
+
+  // 页面跳转-我要招聘
+  bindRecruit: function () {
+    wx.navigateTo({
+      url: '../mineSub/recruit/recruit'
+    })
+  },
+
+  // 页面跳转-设置
+  bindSetup: function () {
+    wx.navigateTo({
+      url: '../mineSub/setup/setup'
+    })
+  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

@@ -1,0 +1,3 @@
+<!--pages/mineSub/collection/collection.wxml-->
+<button>收藏职位</button>
+<button>收藏公司</button>
