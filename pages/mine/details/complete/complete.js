@@ -30,6 +30,18 @@ Page({
     app.globalData.userDetails.mobile = val.mobile
     app.globalData.userDetails.email = val.email
     app.globalData.hasCompleted = true
+
+    wx.request({
+      url: 'https://www.baidu.com/',
+      success (res) {
+        console.log("success")
+        console.log(res)
+      },
+      fail (res) {
+        console.log("fail")
+        console.log(res)
+      }
+    })
   },
 
   /**

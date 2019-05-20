@@ -4,8 +4,8 @@
     <button bindtap="bindCompleteDetail"> 完善信息 </button>
   </block>
   <block wx:else>
-    <text>昵称：{{userDetails.nickname}}</text>
-    <text>电话：{{userDetails.mobile}}</text>
-    <text>邮箱：{{userDetails.email}}</text>
+    <text>昵称：{{userDetails.nickname}}\n</text>
+    <text>电话：{{userDetails.mobile}}\n</text>
+    <text>邮箱：{{userDetails.email}}\n</text>
   </block>
 </view>
