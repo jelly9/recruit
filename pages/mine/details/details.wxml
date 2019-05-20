@@ -1,0 +1,11 @@
+<!--pages/mineSub/details/details.wxml-->
+<view>
+  <block wx:if="{{!hasCompleted}}" >
+    <button bindtap="bindCompleteDetail"> 完善信息 </button>
+  </block>
+  <block wx:else>
+    <text>昵称：{{userDetails.nickname}}</text>
+    <text>电话：{{userDetails.mobile}}</text>
+    <text>邮箱：{{userDetails.email}}</text>
+  </block>
+</view>

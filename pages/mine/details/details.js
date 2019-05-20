@@ -1,23 +1,17 @@
 // pages/mineSub/details/details.js
-const app = getApp()
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    detail: "个人详情",
-    hasDetail: false
+    userDetails: null,
+    hasCompleted: false
   },
   
-  bindDetail: function () {
-    this.setData({
-      detail: "个人详情",
-    })
-    app.globalData.hasDetail = true
+  bindCompleteDetail: function () {
     wx.navigateTo({
-      url: '../../logs/logs'
+      url: './complete/complete'
     })
   },
 
@@ -25,8 +19,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    /*
+    1.获取appDetails
+    */
+    let app = getApp()
     this.setData({
-      hasDetail: app.globalData.hasDetail
+      userDetails: app.globalData.userDetails,
+      hasCompleted: app.globalData.hasCompleted
     })
   },
 
@@ -41,7 +40,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let app = getApp()
+    this.setData({
+      userDetails: app.globalData.userDetails,
+      hasCompleted: app.globalData.hasCompleted
+    })
   },
 
   /**

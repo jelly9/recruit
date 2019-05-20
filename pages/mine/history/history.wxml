@@ -1,2 +1,2 @@
 <!--pages/mineSub/history/history.wxml-->
-<text>投递历史</text>
+<button>投递历史</button>

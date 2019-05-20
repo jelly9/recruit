@@ -4,8 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
+    userInfo: null,
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
@@ -19,42 +18,42 @@ Page({
   // 页面跳转-个人详情
   bindDetails: function () {
     wx.navigateTo({
-      url: '../mineSub/details/details'
+      url: '../mine/details/details'
     })
   },
 
   // 页面跳转-简历
   bindResume: function () {
     wx.navigateTo({
-      url: '../mineSub/resume/resume'
+      url: '../mine/resume/resume'
     })
   },
 
   // 页面跳转-投递历史
   bindHistory: function () {
     wx.navigateTo({
-      url: '../mineSub/history/history'
+      url: '../mine/history/history'
     })
   },
   
   // 页面跳转-个人收藏
   bindCollection: function () {
     wx.navigateTo({
-      url: '../mineSub/collection/collection'
+      url: '../mine/collection/collection'
     })
   },
 
   // 页面跳转-我要招聘
   bindRecruit: function () {
     wx.navigateTo({
-      url: '../mineSub/recruit/recruit'
+      url: '../mine/recruit/recruit'
     })
   },
 
   // 页面跳转-设置
   bindSetup: function () {
     wx.navigateTo({
-      url: '../mineSub/setup/setup'
+      url: '../mine/setup/setup'
     })
   },
 

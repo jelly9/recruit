@@ -1,0 +1,8 @@
+<!--pages/mineSub/details/complete/complete.wxml-->
+
+<form bindsubmit="bindSubmit">
+  联系电话：<input placeholder="请输入电话" name="mobile"></input>
+  电子邮箱：<input placeholder="请输入邮箱" name="email"></input>
+  <text>\n</text>
+  <button form-type="submit">提交</button>
+</form>
