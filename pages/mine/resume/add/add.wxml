@@ -1,7 +1,6 @@
 <!--pages/mine/resume/add/add.wxml-->
 <view class="page">
   <view class="add-background weui-cells_card">
-
     <form bindsubmit="bindAdd">
       姓名：
       <input placeholder="请输入姓名" name="name"></input>

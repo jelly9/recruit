@@ -11,7 +11,6 @@
 .background-white {
   background: white；
 }
-
 page {
   font-size: 35rpx;
   line-height: 1.6;
@@ -558,7 +557,6 @@ icon {
 }
 .weui-search-bar {
   position: relative;
-  padding: 20rpx 20rpx;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -580,6 +578,7 @@ icon {
   vertical-align: middle;
 }
 .weui-search-bar__form {
+  height: 63rpx;
   position: relative;
   -webkit-box-flex: 1;
   -ms-flex: auto;
@@ -587,6 +586,7 @@ icon {
   border-radius: 10rpx;
   background: #FFFFFF;
   border: 1rpx solid #E6E6EA;
+  margin-top: 10rpx;
 }
 .weui-search-bar__box {
   position: relative;
@@ -600,7 +600,7 @@ icon {
 .weui-search-bar__input {
   height: 56rpx;
   line-height: 56rpx;
-  font-size: 24rpx;
+  font-size: 30rpx;
 }
 .weui-icon-clear {
   position: absolute;
@@ -623,7 +623,9 @@ icon {
   line-height: 56rpx;
 }
 .weui-search-bar__cancel-btn {
-  margin-left: 20rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  margin-top: 12rpx;
   line-height: 56rpx;
   color: #09BB07;
   white-space: nowrap;

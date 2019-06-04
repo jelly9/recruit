@@ -1,2 +1,6 @@
 <!--pages/mine/recruit/add/add.wxml-->
-<text>pages/mine/recruit/add/add.wxml</text>
+<view class="page">
+  <view class="weui-cells weui-cells_card">
+    <text>请前往CMS系统添加职位：本次验证码为</text>
+  </view>
+</view>
