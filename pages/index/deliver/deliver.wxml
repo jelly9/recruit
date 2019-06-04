@@ -1,20 +1,17 @@
-<!--pages/mineSub/resume/resume.wxml-->
+<!--pages/index/deliver/deliver.wxml-->
 <view class="page">
   <view class="weui-cells weui-cells_card">
-    <navigator url="./add/add">
-      <button>添加简历</button>
-    </navigator>
-    <view class="resume-title">简历列表</view>
+    <text>简历列表:</text>
     <block wx:for="{{resumeList}}">
-      <view class="resume-background weui-cells weui-cells_card">
-        <text>简历{{index+1}}\n</text>
+      <view class="deliver-background weui-cells weui-cells_card">
+        <text>简历 {{index+1}}\n</text>
         <text>姓名：{{item.name}}\n</text>
         <text>专业：{{item.major}}\n</text>
         <text>学校：{{item.school}}\n</text>
         <text>电话：{{item.mobile}}\n</text>
         <text>邮箱：{{item.email}}\n</text>
         <text>职位：{{item.post}}\n</text>
-        <navigator>简历详情...</navigator>
+        <button bindtap="bindDeliver" data-resume_id="{{item.resume_id}}">投递该简历</button>
       </view>
     </block>
   </view>

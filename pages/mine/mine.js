@@ -22,41 +22,6 @@ Page({
     })
   },
 
-  // 页面跳转-简历
-  bindResume: function () {
-    wx.navigateTo({
-      url: '../mine/resume/resume'
-    })
-  },
-
-  // 页面跳转-投递历史
-  bindHistory: function () {
-    wx.navigateTo({
-      url: '../mine/history/history'
-    })
-  },
-  
-  // 页面跳转-个人收藏
-  bindCollection: function () {
-    wx.navigateTo({
-      url: '../mine/collection/collection'
-    })
-  },
-
-  // 页面跳转-我要招聘
-  bindRecruit: function () {
-    wx.navigateTo({
-      url: '../mine/recruit/recruit'
-    })
-  },
-
-  // 页面跳转-设置
-  bindSetup: function () {
-    wx.navigateTo({
-      url: '../mine/setup/setup'
-    })
-  },
-
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

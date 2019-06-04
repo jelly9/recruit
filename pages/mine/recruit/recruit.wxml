@@ -1,2 +1,23 @@
 <!--pages/mineSub/recruit/recruit.wxml-->
-<button>我要招人</button>
+<view class="page">
+  <view class="weui-cells weui-cells_card">
+    <navigator url="./add/add">
+      <button>添加职位</button>
+    </navigator>
+    <view class="recruit-title">职位列表</view>
+    <block wx:for="{{postList}}">
+      <view class="recruit-background weui-cells weui-cells_card">
+        <text>职位{{index+1}}\n</text>
+        <text>职位名：{{item.title}}\n</text>
+        <text>岗位职责:\n</text>
+        <block wx:for="{{item.desc[0].claim}}">
+          <text>{{item.text}}\n</text>
+        </block>
+        <text>任职要求:\n</text>
+        <block wx:for="{{item.desc[1].claim}}">
+          <text>{{item.text}}\n</text>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,6 +1,6 @@
-<!--pages/mine/mine.wxml-->
+<!-- pages/mine/mine.wxml -->
 <view class="container">
-  <view class="userinfo">
+  <view class="userinfo mine-info">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindDetails" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -8,11 +8,22 @@
     </block>
   </view>
   <text>\n</text>
-  <view class="body-view">
-    <button bindtap="bindResume">简历</button>
-    <button bindtap="bindHistory">历史</button>
-    <button bindtap="bindCollection">收藏</button>
-    <button bindtap="bindRecruit">招人</button>
-    <button bindtap="bindSetup">设置</button>
+
+  <view class="body-view navbar__slider">
+    <navigator url="./resume/resume">
+      <button>简历</button>
+    </navigator>
+    <navigator url="./history/history">
+      <button>历史</button>
+    </navigator>
+    <navigator url="./collection/collection">
+      <button>收藏</button>
+    </navigator>
+    <navigator url="./recruit/recruit">
+      <button>招人</button>
+    </navigator>
+    <navigator url="./setup/setup">
+      <button>设置</button>
+    </navigator>
   </view>
 </view>

@@ -1,1 +1,9 @@
 /* pages/mineSub/recruit/recruit.wxss */
+
+.recruit-background {
+  background: white;
+  font-size: 30rpx;
+}
+.recruit-title {
+  font-size: 35rpx;
+}

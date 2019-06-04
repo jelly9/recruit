@@ -1,2 +1,21 @@
 <!--pages/mineSub/history/history.wxml-->
-<button>投递历史</button>
+<view class="page">
+  <view class="weui-cells_card">
+    <view class="history-title">投递历史</view>
+    <block wx:for="{{deliverList}}">
+      <view class="history-background weui-cells weui-cells_card">
+        <text>投递{{index+1}}\n</text>
+        <text>姓名：{{item.Resume.name}}\n</text>
+        <text>岗位名：{{item.Detail.title}}\n</text>
+        <text>岗位职责:\n</text>
+        <block wx:for="{{item.Detail.desc[0].claim}}">
+          <text>{{item.text}}\n</text>
+        </block>
+        <text>任职要求:\n</text>
+        <block wx:for="{{item.Detail.desc[1].claim}}">
+          <text>{{item.text}}\n</text>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>

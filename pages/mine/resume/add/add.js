@@ -1,5 +1,5 @@
-// pages/mineSub/resume/resume.js
-const constant = require("../../../utils/const.js")
+// pages/mine/resume/add/add.js
+const constant = require("../../../../utils/const.js")
 
 Page({
 
@@ -7,30 +7,51 @@ Page({
    * 页面的初始数据
    */
   data: {
-    resumeList: null
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+  },
+
+  bindAdd: function (e) {
+    console.log("event: ", e)
     let app = getApp()
-    let that = this
     wx.request({
-      url: constant.url.getResumeList,
-      method: "GET",
+      url: constant.url.addResume,
+      method: "POST",
       data: {
-        "uid": app.globalData.userDetails.uid
+        "uid": app.globalData.userDetails.uid,
+        "name": e.detail.value.name,
+        "id_no": e.detail.value.id_no,
+        "email": e.detail.value.email,
+        "mobile": e.detail.value.mobile,
+        "school": e.detail.value.school,
+        "major": e.detail.value.major,
+        "post": e.detail.value.post,
+        "certify_name": e.detail.value.certify_name,
+        "certify_mobile": e.detail.value.certify_mobile,
+        "certify_relation": e.detail.value.certify_relation
       },
       success(res) {
         console.log("success: ", res)
-        that.setData({
-          resumeList: res.data.c
+        wx.showToast({
+          title: '成功',
+          icon: 'succes',
+          duration: 1000,
+          mask: true
         })
       },
       fail(res) {
-        console.log("fali: ", res)
-      }
+        console.log("fail: ", res)
+      },
+    })
+
+    wx.navigateBack({
+      delta: 2,
     })
   },
 

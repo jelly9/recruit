@@ -1,18 +1,37 @@
 // pages/mineSub/recruit/recruit.js
+const constant = require("../../../utils/const.js")
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    postList: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let app = getApp()
+    let that = this
+    wx.request({
+      url: constant.url.getPostList,
+      method: "GET",
+      data: {
+        "uid": app.globalData.userDetails.uid
+      },
+      success(res) {
+        console.log("success: ", res)
+        that.setData({
+          postList: res.data.c
+        })
+      },
+      fail(res) {
+        console.log("fail: ", res)
+      }
+    })
   },
 
   /**

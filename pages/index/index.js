@@ -1,24 +1,26 @@
 //index.js
+const constant = require('../../utils/const.js')
+
 //获取应用实例
 const app = getApp()
-const initData = 'this is first line\nthis is second line'
-const extraLine = []
+
 Page({
   data: {
-    text: initData
+    postList: null
   },
-  add(e) {
-    extraLine.push('other line')
-    this.setData({
-      text: initData + '\n' + extraLine.join('\n')
+  onShow: function() {
+    var that = this
+    wx.request({
+      url: constant.url.allPostList,
+      success(res) {
+        console.log("index success: ", res)
+        that.setData({
+          postList: res.data.c
+        })
+      },
+      fail(res) {
+        console.log("fail: ", res)
+      }
     })
-  },
-  remove(e) {
-    if (extraLine.length > 0) {
-      extraLine.pop()
-      this.setData({
-        text: initData + '\n' + extraLine.join('\n')
-      })
-    }
   }
 })

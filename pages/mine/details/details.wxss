@@ -1,1 +1,6 @@
 /* pages/mineSub/details/details.wxss */
+
+.details-background {
+  background: white;
+  font-size: 30rpx;
+}

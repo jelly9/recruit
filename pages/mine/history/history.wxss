@@ -1,1 +1,9 @@
 /* pages/mineSub/history/history.wxss */
+
+.history-background{
+  background: white;
+  font-size: 30rpx;
+}
+.history-title {
+  font-size: 35rpx;
+}

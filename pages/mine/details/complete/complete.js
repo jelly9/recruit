@@ -1,6 +1,6 @@
 // pages/mineSub/details/complete/complete.js
 
-
+const constant = require("../../../../utils/const.js")
 
 Page({
 
@@ -8,39 +8,52 @@ Page({
    * 页面的初始数据
    */
   data: {
-    wxid:"",
-    nickname: "",
     mobile: "",
     email: ""
   },
 
   bindSubmit: function(e) {
-    /*
-    1.写数据库
-    2.更新全局app
-    */
     let val = e.detail.value
     this.setData({
       mobile: val.mobile,
       email: val.email
     })
-
+    // 设置全局数据
     let app = getApp()
     app.globalData.userDetails.nickname = app.globalData.userInfo.nickName
     app.globalData.userDetails.mobile = val.mobile
     app.globalData.userDetails.email = val.email
+    app.globalData.userDetails.utype = 1
     app.globalData.hasCompleted = true
 
+    // 2. 写数据库
     wx.request({
-      url: 'https://www.baidu.com/',
-      success (res) {
-        console.log("success")
-        console.log(res)
+      url: constant.url.bindUserInfo,
+      method: "POST",
+      data: {
+        "wxid": app.globalData.userDetails.wxid,
+        "nickname": app.globalData.userDetails.nickname, 
+        "utype": app.globalData.userDetails.utype, 
+        "mobile": app.globalData.userDetails.mobile, 
+        "email": app.globalData.userDetails.email
       },
-      fail (res) {
-        console.log("fail")
-        console.log(res)
+      success(res) {
+        console.log("success:", res)
+        wx.showToast({
+          title: '成功',
+          icon: 'succes',
+          duration: 1000,
+          mask: true
+        })    
+      },
+      fail(res) {
+        console.log("fail:", res)
       }
+    })
+
+    // 3. 跳转到个人中心
+    wx.navigateBack({
+      delta: 1
     })
   },
 

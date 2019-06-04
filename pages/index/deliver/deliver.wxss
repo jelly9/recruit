@@ -1,0 +1,10 @@
+/* pages/index/deliver/deliver.wxss */
+
+.weui-cells_card {
+  margin-top: 15rpx;
+  font-size: 35rpx;
+}
+
+.deliver-background {
+  background: white
+}

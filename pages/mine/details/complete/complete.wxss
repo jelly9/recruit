@@ -1,1 +1,5 @@
 /* pages/mineSub/details/complete/complete.wxss */
+
+.complete-background {
+  background: white;
+}

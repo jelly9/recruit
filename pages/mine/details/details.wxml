@@ -1,11 +1,18 @@
 <!--pages/mineSub/details/details.wxml-->
-<view>
-  <block wx:if="{{!hasCompleted}}" >
-    <button bindtap="bindCompleteDetail"> 完善信息 </button>
-  </block>
-  <block wx:else>
-    <text>昵称：{{userDetails.nickname}}\n</text>
-    <text>电话：{{userDetails.mobile}}\n</text>
-    <text>邮箱：{{userDetails.email}}\n</text>
-  </block>
+<view class="page">
+  <view class="details-background weui-cells_card">
+    <block wx:if="{{!hasCompleted}}">
+      <button bindtap="bindCompleteDetail"> 完善信息 </button>
+    </block>
+    <block wx:else>
+      <text>用户id：{{userDetails.uid}}\n</text>
+      <text>用户权限：{{userDetails.utype}}\n</text>
+      <text>昵称：{{userDetails.nickname}}\n</text>
+      <text>电话：{{userDetails.mobile}}\n</text>
+      <text>邮箱：{{userDetails.email}}\n</text>
+      <navigator url="./complete/complete">
+        <button>修改信息</button>
+      </navigator>
+    </block>
+  </view>
 </view>

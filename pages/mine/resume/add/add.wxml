@@ -1,0 +1,30 @@
+<!--pages/mine/resume/add/add.wxml-->
+<view class="page">
+  <view class="add-background weui-cells_card">
+
+    <form bindsubmit="bindAdd">
+      姓名：
+      <input placeholder="请输入姓名" name="name"></input>
+      身份证号：
+      <input placeholder="请输入身份证" name="id_no"></input>
+      邮箱
+      <input placeholder="请输入邮箱" name="email"></input>
+      电话：
+      <input placeholder="请输入电话" name="mobile"></input>
+      学校：
+      <input placeholder="请输入学校" name="school"></input>
+      专业：
+      <input placeholder="请输入专业" name="major"></input>
+      职位：
+      <input placeholder="请输入职位" name="post"></input>
+      证明人姓名：
+      <input placeholder="请输入证明人姓名" name="certify_name"></input>
+      证明人电话：
+      <input placeholder="请输入证明人电话" name="certify_mobile"></input>
+      与证明人关系：
+      <input placeholder="请输入与证明人关系" name="certify_relation"></input>
+      <text>\n</text>
+      <button form-type="submit">添加</button>
+    </form>
+  </view>
+</view>
