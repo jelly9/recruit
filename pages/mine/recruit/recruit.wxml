@@ -1,9 +1,28 @@
 <!--pages/mineSub/recruit/recruit.wxml-->
 <view class="page">
   <view class="weui-cells weui-cells_card">
-    <navigator url="./add/add">
-      <button>添加职位</button>
-    </navigator>
+    <block wx:if="{{false}}">
+      <navigator url="./add/add">
+        <button>完善信息</button>
+      </navigator>
+    </block>
+    <block wx:else>
+      <view class="recruit-background  weui-cells_card">
+        <view class="company-title">北京字节跳动科技有限公司</view>
+        <view>介绍:</view>
+        字节跳动成立于xxx...
+        <view>福利:</view>
+        五险一金，弹性工作xxx...
+        <view>地址:</view>
+        北京市海淀区xxx...
+        <navigator url="./add/add">
+          <button>修改信息</button>
+        </navigator>
+      </view>
+      <navigator url="./add/add">
+        <button>添加职位</button>
+      </navigator>
+    </block>
     <view class="recruit-title">职位列表</view>
     <block wx:for="{{postList}}">
       <view class="recruit-background weui-cells weui-cells_card">

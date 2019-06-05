@@ -7,3 +7,8 @@
 .recruit-title {
   font-size: 35rpx;
 }
+
+.company-title {
+  font-size: 40rpx;
+  color: #888888;
+}
