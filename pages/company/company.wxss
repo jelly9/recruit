@@ -1,1 +1,31 @@
 /* pages/company/company.wxss */
+
+view {
+  font-size: 30rpx;
+}
+text {
+  font-size: 30rpx;
+}
+.company-background {
+  background-color: white;
+}
+.company-title {
+  font-size: 40rpx;
+  color: #888888;
+}
+.company-abstract {
+  font-size: 35rpx;
+}
+.company-weal {
+  font-size: 35rpx;
+}
+.company-address {
+  font-size: 35rpx;
+}
+.weui-cells_card {
+  margin-top: 10rpx;
+  font-size: 35rpx;
+}
+.bold-font {
+  font-weight: bold;
+}

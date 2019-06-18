@@ -1,5 +1,5 @@
-// pages/mine/recruit/add/add.js
-const constant = require("../../../../utils/const.js")
+// pages/company/post/post.js
+const constant = require('../../../utils/const.js')
 
 Page({
 
@@ -7,45 +7,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    postList: null,
+    uid: 0
   },
 
-  bindAdd: function (e) {
-    console.log("event: ", e)
-    let app = getApp()
-    wx.request({
-      url: constant.url.addCompany,
-      method: "POST",
-      data: {
-        "uid": app.globalData.userDetails.uid,
-        "title": e.detail.value.title,
-        "abstract": e.detail.value.abstract,
-        "weal": e.detail.value.weal,
-        "address": e.detail.value.address
-      },
-      success(res) {
-        console.log("success: ", res)
-        app.globalData.userDetails.utype = 4
-        wx.showToast({
-          title: '成功',
-          icon: 'succes',
-          duration: 1000,
-          mask: true
-        })
-      },
-      fail(res) {
-        console.log("fail: ", res)
-      },
-    })
-    wx.navigateBack({
-      delta: 2,
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let app = getApp()
+    this.setData({
+      uid: options.uid
+    })
+    let that = this
+    wx.request({
+      url: constant.url.getPostList,
+      method: "GET",
+      data: {
+        "uid": this.data.uid
+      },
+      success(res) {
+        console.log("success getPostList: ", res)
+        that.setData({
+          postList: res.data.c
+        })
+      },
+      fail(res) {
+        console.log("fail: ", res)
+      }
+    })
   },
 
   /**
@@ -59,7 +49,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

@@ -1,5 +1,7 @@
 /* pages/mineSub/recruit/recruit.wxss */
-
+.bold-font {
+font-weight: bold
+}
 .recruit-background {
   background: white;
   font-size: 30rpx;

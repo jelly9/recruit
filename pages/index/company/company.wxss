@@ -1,0 +1,13 @@
+/* pages/index/company/company.wxss */
+
+.company-background {
+  background: white;
+  font-size: 30rpx;
+}
+.bold-font {
+font-weight:600
+}
+.company-title {
+  font-size: 40rpx;
+  color: #888888;
+}

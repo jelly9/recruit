@@ -13,7 +13,10 @@ const url = {
   addDetail:      requestPrefix + '/recruit/v2/post/addDetail',
   getPostList:    requestPrefix + '/recruit/v2/post/getPostList',
   deliverResume:  requestPrefix + '/recruit/v2/deliver/deliverResume',
-  getDeliverList: requestPrefix + '/recruit/v2/user/getDeliverList'
+  getDeliverList: requestPrefix + '/recruit/v2/user/getDeliverList',
+  addCompany: requestPrefix + '/recruit/v2/user/addCompany',
+  getCompanyInfo: requestPrefix + '/recruit/v2/user/getCompanyInfo',
+  getAllCompanyInfo: requestPrefix + '/recruit/v2/user/getAllCompanyInfo',
 }
 module.exports = {
   url: url,

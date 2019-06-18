@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/company/company",
     "pages/index/deliver/deliver",
     "pages/company/company",
+    "pages/company/post/post",
     "pages/mine/mine",
     "pages/mine/details/details",
     "pages/mine/details/complete/complete",

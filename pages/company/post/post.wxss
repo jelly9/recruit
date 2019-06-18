@@ -1,9 +1,4 @@
-/**index.wxss**/
-
-.weui-search-list {
-  margin-top: 0;
-  background: none;
-}
+/* pages/company/post/post.wxss */
 view {
   font-size: 35rpx;
 }
@@ -12,18 +7,11 @@ view {
 }
 .post-title {
   font-size: 40rpx;
+  color: #000000;
   font-weight: bold;
-  color: #000;
-}
-.company-title {
-  font-size: 36rpx;
-  color: rgb(22, 112, 214);
 }
 .post-duty {
   font-size: 30rpx;
-}
-.bold-font {
-font-weight: bold
 }
 .post-claim {
   font-size: 30rpx;
@@ -38,4 +26,9 @@ font-weight: bold
   font-weight: bold;
   color: rgb(14, 209, 223);
   left: 600rpx;
+
+  left: 600rpx;
+}
+.bold-font {
+  font-weight: bold;
 }

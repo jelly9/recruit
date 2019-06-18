@@ -1,1 +1,5 @@
 /* pages/mine/recruit/add/add.wxss */
+
+.add-background {
+  background: white;
+}

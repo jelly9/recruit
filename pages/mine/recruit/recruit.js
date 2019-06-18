@@ -7,31 +7,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    postList: null
+    companyInfo: null,
+    hasComplete: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let app = getApp()
-    let that = this
-    wx.request({
-      url: constant.url.getPostList,
-      method: "GET",
-      data: {
-        "uid": app.globalData.userDetails.uid
-      },
-      success(res) {
-        console.log("success: ", res)
-        that.setData({
-          postList: res.data.c
-        })
-      },
-      fail(res) {
-        console.log("fail: ", res)
-      }
-    })
+    
   },
 
   /**
@@ -45,7 +29,46 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let app = getApp()
+    let that = this
+    wx.request({
+      url: constant.url.getPostList,
+      method: "GET",
+      data: {
+        "uid": app.globalData.userDetails.uid
+      },
+      success(res) {
+        console.log("success getPostList: ", res)
+        that.setData({
+          postList: res.data.c
+        })
+      },
+      fail(res) {
+        console.log("fail: ", res)
+      }
+    })
 
+    wx.request({
+      url: constant.url.getCompanyInfo,
+      method: "GET",
+      data: {
+        "uid": app.globalData.userDetails.uid
+      },
+      success(res) {
+        console.log("success getCompanyInfo: ", res)
+        that.setData({
+          companyInfo: res.data.c
+        })
+      },
+      fail(res) {
+        console.log("fail: ", res)
+      }
+    })
+    if (app.globalData.userDetails.utype == 4) {
+      that.setData({
+        hasComplete: true
+      })
+    }
   },
 
   /**

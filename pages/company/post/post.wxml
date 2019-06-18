@@ -1,0 +1,27 @@
+<view class="page">
+  <block wx:for="{{postList}}">
+    <view class="post-background weui-cells_card">
+      <view class='post-pay'>
+        {{item.payment}}k/月
+      </view>
+      <view class="post-title">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="post-duty">
+        <text class='bold-font'>岗位职责:\n</text>
+        <block wx:for="{{item.desc[0].claim}}">
+          <text>{{item.text}}\n</text>
+        </block>
+      </view>
+      <view class="post-claim">
+        <text class='bold-font'>任职要求:\n</text>
+        <block wx:for="{{item.desc[1].claim}}">
+          <text>{{item.text}}\n</text>
+        </block>
+      </view>
+      <navigator url="../../index/deliver/deliver?company_id={{item.detail.uid}}&detail_id={{item.detail._id}}">
+        <button>投递</button>
+      </navigator>
+    </view>
+  </block>
+</view>

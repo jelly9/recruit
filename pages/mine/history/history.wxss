@@ -1,5 +1,7 @@
 /* pages/mineSub/history/history.wxss */
-
+.bold-font {
+font-weight: bold
+}
 .history-background{
   background: white;
   font-size: 30rpx;

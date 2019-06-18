@@ -27,6 +27,12 @@ Page({
       }
     })
   },
+  bindCompanyInfo: function(e) {
+    console.log("e:", e)
+    wx.navigateTo({
+      url: './company/company?companyInfo=' + JSON.stringify(e.currentTarget.dataset.info),
+    })
+  },
   // 输入框发生变化时触发
   inputTyping: function (e) {
     this.setData({

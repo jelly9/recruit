@@ -1,0 +1,14 @@
+<!--pages/index/company/company.wxml-->
+<view class="page">
+  <view class="weui-cells weui-cells_card">
+    <view class="company-background  weui-cells_card">
+      <view class="company-title">{{companyInfo.title}}</view>
+      <view class='bold-font'>介绍:</view>
+      {{companyInfo.abstract}}
+      <view class='bold-font'>福利:</view>
+      {{companyInfo.weal}}
+      <view class='bold-font'>地址:</view>
+      {{companyInfo.address}}
+    </view>
+  </view>
+</view>

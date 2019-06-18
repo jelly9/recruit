@@ -1,6 +1,17 @@
 <!--pages/mine/recruit/add/add.wxml-->
 <view class="page">
-  <view class="weui-cells weui-cells_card">
-    <text>请前往CMS进行操作，本次验证码为：1124，请勿泄漏。</text>
+  <view class="add-background weui-cells_card">
+    <form bindsubmit="bindAdd">
+      公司名：
+      <input placeholder="请输入公司名" name="title"></input>
+      简介：
+      <input placeholder="请输入公司简介" name="abstract"></input>
+      福利：
+      <input placeholder="请输入公司福利" name="weal"></input>
+      地址：
+      <input placeholder="请输入公司地址" name="address"></input>
+      <text>\n</text>
+      <button form-type="submit">添加</button>
+    </form>
   </view>
 </view>

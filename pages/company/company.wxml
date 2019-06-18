@@ -1,2 +1,32 @@
-<!--pages/company/company.wxml-->
-<text>公司信息页面</text>
+<view class='page'>
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="18"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{keyword}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm='searchPOI' />
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="18"></icon>
+        <view class="weui-search-bar__text">搜索公司</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+  <block wx:for="{{companyInfoList}}">
+    <view class="company-background  weui-cells_card">
+      <view class="company-title">{{item.title}}</view>
+      <view class="company-abstract bold-font"> 公司简介：
+      </view>
+      <text>{{item.abstract}}</text>
+      <view class="company-weal bold-font">福利：
+      </view>
+      <text>{{item.weal}}</text>
+      <view class="company-address bold-font">公司地址：
+      </view>
+      <text>{{item.address}}</text>
+      <navigator url="./post/post?uid={{item.uid}}">
+        <button>热招职位</button>
+      </navigator>
+    </view>
+  </block>
+</view>
